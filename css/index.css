@@ -1,0 +1,103 @@
+/* Estilos globales */
+body,
+html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f4e8;
+    background-image: url('../src/background.jpg');
+    /* Vincular imagen de fondo */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(5px);
+    /* Efecto difuminado para el fondo */
+}
+
+header {
+    background: linear-gradient(90deg, #d3cfc4, #c0e2a0);
+    color: #333;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.5rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.navbar {
+    background: linear-gradient(90deg, #f4e2b8, #c0e2a0);
+    border-bottom: 4px solid #333;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-nav .nav-link {
+    flex-grow: 1;
+    text-align: center;
+    color: #333;
+    border-right: 2px solid #333;
+    padding: 0.8rem;
+    border-radius: 7.75%;
+}
+
+.navbar-nav .nav-link:last-child {
+    border-right: none;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    background-color: #f5efd7;
+    color: #35682D;
+    border-radius: 7.75%;
+    -webkit-text-stroke: 1px #35682D; /* Cambia el color y el grosor del contorno */
+    color: #35682D;
+}
+
+
+/* Estilos del main */
+main {
+    flex: 1;
+    padding: 3% 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: space-around;
+}
+
+.col-md-2 {
+    display: none;
+    /* Oculto en móvil, visible en escritorio */
+}
+
+/* Estilos para los contenedores de las secciones */
+section {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(90deg, #d3cfc4, #c0e2a0);
+    color: #333;
+    text-align: center;
+    padding: 1rem;
+    border-top: 4px solid #333;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsividad */
+@media (min-width: 768px) {
+    .col-md-2 {
+        display: block;
+    }
+}
